@@ -23,7 +23,7 @@ import { useScroll } from "framer-motion";
 export default function Home() {
   const soldOut = false;
 
-  const { address } = useAccount();
+  const { address, isConnected } = useAccount();
   const [redeemed, setRedeemed] = useRecoilState(redeemedState);
   const [isRedeemLoading, updateLoading] = useState(false);
   const publicClient = usePublicClient({ chainId: web3Config.chain.id });
@@ -64,6 +64,8 @@ export default function Home() {
   });
 
   const handleRedeem = async () => {
+    if (!isConnected) return toast.error("Please connect your wallet first!");
+
     if (!isRedeemLoading) {
       // console.log({ error });
 
