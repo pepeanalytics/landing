@@ -60,7 +60,7 @@ export default function Home() {
     address: web3Config.redeemContractAddress,
     abi: web3Config.redeemContractABI,
     chainId: web3Config.chain.id,
-    functionName: "redeemNft",
+    functionName: "redeemNfts",
   });
 
   const handleRedeem = async () => {
@@ -94,7 +94,7 @@ export default function Home() {
           }
 
           await redeemNft({
-            args: [tokens[0]],
+            args: [tokens],
           });
 
           //On sucess here show the new component Akash has made
