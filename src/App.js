@@ -56,7 +56,6 @@ function App() {
             { address }
           );
 
-          console.log(resp);
           setIsHolderVerified(resp?.data?.data?.holder);
         } catch (e) {
           console.log(e);
