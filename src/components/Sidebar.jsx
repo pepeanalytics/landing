@@ -16,13 +16,9 @@ export default function Sidebar() {
     <div className="siderbarWrapper">
       <div className="sidebar">
         <SideBarIcon route={"/"} icon={homeIcon} />
-        {(isHolderVerified || isRedeemed) && (
-          <SideBarIcon
-            route={"https://pepeanalytics-mintpage.pages.dev/"}
-            icon={frog}
-          />
-        )}
-        <SideBarIcon route={"/roadmap"} icon={roadmap} />
+        <SideBarIcon route={"https://app.pepeanalytics.com/"} icon={frog} />
+
+        {/* <SideBarIcon route={"/roadmap"} icon={roadmap} /> */}
         {/* {!isRedeemed ? <SidebarRedeem /> : null} */}
       </div>
     </div>
