@@ -46,7 +46,7 @@ export default function Home() {
 
   const { writeAsync: setApprovalForAll, isLoading } = useContractWrite(config);
 
-  const [isApproved, setIsApproved] = useState(alreadyApproved);
+  const [isApproved, setIsApproved] = useState(false);
 
   // const { config: redeemConfig, error: redeemError } = usePrepareContractWrite({
   //   address: web3Config.redeemContractAddress,
@@ -84,7 +84,7 @@ export default function Home() {
           }
 
           // ensure to test that after this approval happens the parallel call of the next redeem function works
-          if (!isApproved) {
+          if (!alreadyApproved && !isApproved) {
             let approvalTx = await setApprovalForAll();
 
             // console.log(approvalTx.hash);
