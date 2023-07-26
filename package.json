@@ -21,7 +21,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "NETWORK=POLYGON react-scripts start",
     "start:eth": "NETWORK=ETH react-scripts start",
     "start:polygon": "NETWORK=POLYGON react-scripts start",
     "build": "react-scripts build",
