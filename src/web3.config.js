@@ -1,11 +1,12 @@
 import { goerli, mainnet, polygon } from "wagmi/chains";
+import { NETWORK } from "./consts";
 
 const web3Config = {
   openSeaLink: "https://opensea.io",
-  chain: polygon,
-  etherScanRoot: "https://goerli.etherscan.io/tx/",
-  redeemContractAddress: "0x776EF6faF3065C8B75213E580AE232ea160b2667",
-  contractAddress: "0x2e2bdf65de7a5ad87f8fe60f77100a41e754a2d6",
+  chain: NETWORK === "POLYGON" ? polygon : mainnet,
+  etherScanRoot: NETWORK === "POLYGON" ? "https://polygonscan.com/tx/" : "https://etherscan.io/tx",
+  redeemContractAddress: NETWORK === "POLYGON" ? "0x776EF6faF3065C8B75213E580AE232ea160b2667" : "0x4c6b33c3ba4f627cf4fe6a8a8ebcb7c97d6a579e",
+  contractAddress: NETWORK === "POLYGON" ? "0x2e2bdf65de7a5ad87f8fe60f77100a41e754a2d6" : "0xfaa2471e93bd1cee3b0ab381c242ada8e1d1a759",
   redeemContractABI: [
     {
       inputs: [
