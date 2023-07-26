@@ -8,6 +8,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useAccount, useSwitchNetwork, useNetwork } from "wagmi";
+import { NETWORK } from "./consts";
 
 // import { switchNetwork } from "wagmi/actions";
 import { useRecoilState } from "recoil";
@@ -29,6 +30,8 @@ function App() {
 
   // Always stay on the right chain
   useEffect(() => {
+    console.log(NETWORK);
+
     if (!isConnected) return;
 
     if (chain?.id === web3Config.chain.id) return;
