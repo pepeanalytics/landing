@@ -4,7 +4,7 @@ import RedeemBtn from "./RedeemBtn";
 export default function Redeem({ soldOut, loading, handleRedeem }) {
   const handleShowMe = () =>
     window.open(
-      "https://medium.com/@pepeanalytics/pepe-analytics-are-you-ready-34bc853c126",
+      "https://medium.com/@pepeanalytics/pepe-analytics-official-launch-details-d58fe61484b1",
       "_blank"
     );
   return (

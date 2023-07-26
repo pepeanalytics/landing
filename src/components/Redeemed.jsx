@@ -3,7 +3,7 @@ import RedeemBtn from "./RedeemBtn";
 
 export default function Redeemed() {
   const handleClicked = () => {
-    window.open("http://app.pepeanalytics.com", "_blank");
+    window.open("https://app.pepeanalytics.com/", "_blank");
   };
   return (
     <>
